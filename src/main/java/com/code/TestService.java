@@ -24,19 +24,10 @@ public class TestService {
     private ProducerTemplate producerTemplate;
     @Bean
     public void init() throws Exception {
-//        MqConfig config=new MqConfig("192.168.110.118","test","123456","localtest");
-//        controller=DefaultEventController.getInstance(config);
-//        log.info("test");
-//        producerTemplate =controller.getEopEventTemplate();
-
-        MqConfig config = new MqConfig("amqp-cn-lbj3er9d7005.cn-zhangjiakou.amqp-1.net.mq.amqp.aliyuncs.com",
-                "MjphbXFwLWNuLWxiajNlcjlkNzAwNTpMVEFJNEdKTFZpbUJRb3ltV3VaWHFCN2c=",
-                "NzY4MkEwM0EyNTEzQTE5RDAyRTA5QjI1MUMxMTA4MTM1RDdDQzQzODoxNjk5Nzc4MDcwNzY1", "dev");
-        controller = DefaultEventController.getInstance(config);
-        log.info("test");
-        producerTemplate = controller.getEopEventTemplate();
-
-
+       MqConfig config=new MqConfig("192.168.110.118","test","123456","localtest");
+       controller=DefaultEventController.getInstance(config);
+       log.info("test");
+       producerTemplate =controller.getEopEventTemplate();
     }
 
     /**

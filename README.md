@@ -49,9 +49,9 @@ mvn install:install-file -Dmaven.repo.local=/Users/huotianyu/developTool/maven-r
 
     @Bean
     public void init() throws Exception {
-        MqConfig config = new MqConfig("amqp-cn-lbj3er9d7005.cn-zhangjiakou.amqp-1.net.mq.amqp.aliyuncs.com",
-                "MjphbXFwLWNuLWxiajNlcjlkNzAwNTpMVEFJNEdKTFZpbUJRb3ltV3VaWHFCN2c=",
-                "NzY4MkEwM0EyNTEzQTE5RDAyRTA5QjI1MUMxMTA4MTM1RDdDQzQzODoxNjk5Nzc4MDcwNzY1", "dev");
+        MqConfig config = new MqConfig("serverHost",
+                "username",
+                "password", "virtualHost");
         controller = DefaultEventController.getInstance(config);
         producerTemplate = controller.getEopEventTemplate();
     }
